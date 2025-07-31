@@ -14,7 +14,8 @@ sample_signals = [
 ]
 
 df = pd.DataFrame(sample_signals)
-df["timestamp"] = pd.to_datetime(df["timestamp"]).dt.tz_localize("UTC").dt.tz_convert("US/Eastern")
+df["timestamp"] = pd.to_datetime(df["timestamp"], utc=True).dt.tz_convert("US/Eastern")
+
 
 st.dataframe(df.sort_values("confidence", ascending=False), use_container_width=True)
 
