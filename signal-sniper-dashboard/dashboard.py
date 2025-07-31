@@ -19,3 +19,11 @@ df["timestamp"] = pd.to_datetime(df["timestamp"]).dt.tz_localize("UTC").dt.tz_co
 st.dataframe(df.sort_values("confidence", ascending=False), use_container_width=True)
 
 st.markdown("✅ This dashboard will soon show real-time trades and signals from your AI system.")
+
+import os
+port = int(os.environ.get("PORT", 8501))
+st._is_running_with_streamlit = True
+from streamlit.web import cli as stcli
+import sys
+sys.argv = ["streamlit", "run", "dashboard.py", "--server.port", str(port), "--server.address=0.0.0.0"]
+sys.exit(stcli.main())
