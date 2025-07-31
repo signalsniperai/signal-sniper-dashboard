@@ -1,30 +1,35 @@
-import streamlit as st
 import pandas as pd
+import streamlit as st
 import requests
 from datetime import datetime
+import pytz
 
-st.set_page_config(page_title="Signal Sniper Dashboard", layout="wide")
+st.set_page_config(page_title="Signal Sniper - Live Feed", layout="wide")
 
-st.title("📡 Signal Sniper - Live Feed")
+st.title("🧠 Signal Sniper - Live Feed")
 
-# Example dummy data — we’ll later connect this to Supabase or your scraper
-sample_signals = [
-    {"ticker": "CELH", "confidence": 0.81, "strategy": "Volume Spike", "timestamp": "2025-07-31T15:22:00Z"},
-    {"ticker": "FUBO", "confidence": 0.76, "strategy": "Options Sweep", "timestamp": "2025-07-31T15:21:00Z"},
-]
+# Replace this URL with your actual endpoint
+API_URL = "https://your-n8n-webhook/render-feed"
 
-df = pd.DataFrame(sample_signals)
-df["timestamp"] = pd.to_datetime(df["timestamp"], utc=True).dt.tz_convert("US/Eastern")
+try:
+    response = requests.get(API_URL)
+    response.raise_for_status()
+    data = response.json()
 
+    df = pd.DataFrame(data)
 
-st.dataframe(df.sort_values("confidence", ascending=False), use_container_width=True)
+    if "timestamp" in df.columns:
+        df["timestamp"] = pd.to_datetime(df["timestamp"])
 
-st.markdown("✅ This dashboard will soon show real-time trades and signals from your AI system.")
+        # Fix: if already tz-aware, just convert to Eastern; otherwise localize to UTC then convert
+        if df["timestamp"].dt.tz is None:
+            df["timestamp"] = df["timestamp"].dt.tz_localize("UTC").dt.tz_convert("US/Eastern")
+        else:
+            df["timestamp"] = df["timestamp"].dt.tz_convert("US/Eastern")
 
-import os
-port = int(os.environ.get("PORT", 8501))
-st._is_running_with_streamlit = True
-from streamlit.web import cli as stcli
-import sys
-sys.argv = ["streamlit", "run", "dashboard.py", "--server.port", str(port), "--server.address=0.0.0.0"]
-sys.exit(stcli.main())
+        df["timestamp"] = df["timestamp"].dt.strftime("%Y-%m-%d %I:%M:%S %p")
+
+    st.dataframe(df[::-1], use_container_width=True)
+
+except Exception as e:
+    st.error(f"Error fetching or processing data: {e}")
