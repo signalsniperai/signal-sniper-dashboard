@@ -1,0 +1,45 @@
+2025-07-30 19:42:53,313 [INFO] === Signal Sniper Script Started ===
+2025-07-30 19:42:54,737 [INFO] Signal Sniper v2.0 starting | test_mode=True | threshold=75
+2025-07-30 19:42:54,866 [INFO] Webhook test OK
+2025-07-30 19:43:14,661 [INFO] Filtered signals: 127
+2025-07-30 19:43:15,975 [ERROR] Supabase insert failed: [Errno 11001] getaddrinfo failed
+2025-07-30 19:43:16,014 [INFO] Webhook SUCCESS for CELH
+
+
+                        Celsius Holdings Inc
+                      
+
+                        Stock
+2025-07-30 19:43:16,020 [ERROR] Supabase insert failed: [Errno 11001] getaddrinfo failed
+2025-07-30 19:43:16,078 [INFO] Webhook SUCCESS for CTVA
+
+
+                        Corteva, Inc. Common Stock
+                      
+
+                        Stock
+2025-07-30 19:43:16,081 [ERROR] Supabase insert failed: [Errno 11001] getaddrinfo failed
+2025-07-30 19:43:16,114 [INFO] Webhook SUCCESS for EXLS
+
+
+                        ExlService Holdings, Inc. - Common Stock
+                      
+
+                        Stock
+2025-07-30 19:43:16,116 [ERROR] Supabase insert failed: [Errno 11001] getaddrinfo failed
+2025-07-30 19:43:16,171 [INFO] Webhook SUCCESS for FN
+
+
+                        Fabrinet
+                      
+
+                        Stock
+2025-07-30 19:43:16,173 [ERROR] Supabase insert failed: [Errno 11001] getaddrinfo failed
+2025-07-30 19:43:16,216 [INFO] Webhook SUCCESS for HUBB
+
+
+                        Hubbell Inc Common Stock
+                      
+
+                        Stock
+2025-07-30 19:43:16,216 [INFO] Executed: 5

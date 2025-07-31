@@ -1,0 +1,68 @@
+{
+    "name": "SignalSniper_Starter_v1",
+    "nodes": [
+        {
+            "parameters": {
+                "httpMethod": "POST",
+                "path": "signal-sniper"
+            },
+            "name": "Webhook",
+            "type": "n8n-nodes-base.webhook",
+            "typeVersion": 1,
+            "position": [
+                250,
+                300
+            ]
+        },
+        {
+            "parameters": {
+                "url": "https://news.google.com/rss/search?q=insider+trading+OR+form+4+OR+13F",
+                "options": {}
+            },
+            "name": "RSS Feed",
+            "type": "n8n-nodes-base.rssFeedRead",
+            "typeVersion": 1,
+            "position": [
+                450,
+                300
+            ]
+        },
+        {
+            "parameters": {
+                "chatId": "@AlpacaAgentBot",
+                "text": "New trade alert: {{$json[\"title\"]}} - {{$json[\"link\"]}}"
+            },
+            "name": "Telegram",
+            "type": "n8n-nodes-base.telegram",
+            "typeVersion": 1,
+            "position": [
+                650,
+                300
+            ]
+        }
+    ],
+    "connections": {
+        "Webhook": {
+            "main": [
+                [
+                    {
+                        "node": "RSS Feed",
+                        "type": "main",
+                        "index": 0
+                    }
+                ]
+            ]
+        },
+        "RSS Feed": {
+            "main": [
+                [
+                    {
+                        "node": "Telegram",
+                        "type": "main",
+                        "index": 0
+                    }
+                ]
+            ]
+        }
+    }
+}

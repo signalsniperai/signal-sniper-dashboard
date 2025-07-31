@@ -1,0 +1,17 @@
+source,ticker,company,sector,price,change,volume,signal_type,description,target_sector,sector_score,scraped_at,signal_score
+Finviz Gainers,News,Screener,Maps,Forex,Crypto,Backtests,momentum,Screener - Crypto gain,AI/Tech,20,2025-07-30T05:59:57.180914,45
+Finviz Gainers,1,STAI,ScanTech AI Systems Inc,6.46,1.19,77.88%,momentum,STAI - 1.19 gain,AI/Tech,20,2025-07-30T05:59:57.180914,45
+Yahoo Trending,TDOC,"Teladoc Health, Inc.",trending,,7.53 -0.67 (-8.17%),,trending,"Teladoc Health, Inc. trending on Yahoo",Biotech,25,2025-07-30T05:59:57.180914,45
+Yahoo Trending,SOFI,"SoFi Technologies, Inc.",trending,,22.40 +1.38 (+6.57%),,trending,"SoFi Technologies, Inc. trending on Yahoo",Other,5,2025-07-30T05:59:57.180914,25
+Yahoo Trending,V,Visa Inc.,trending,,351.29 -4.18 (-1.18%),,trending,Visa Inc. trending on Yahoo,Other,5,2025-07-30T05:59:57.180914,25
+Yahoo Trending,PANW,"Palo Alto Networks, Inc.",trending,,193.84 -10.66 (-5.21%),,trending,"Palo Alto Networks, Inc. trending on Yahoo",Other,5,2025-07-30T05:59:57.180914,25
+Yahoo Trending,SBUX,Starbucks Corporation,trending,,92.96 -0.71 (-0.76%),,trending,Starbucks Corporation trending on Yahoo,Other,5,2025-07-30T05:59:57.180914,25
+Yahoo Trending,NVO,Novo Nordisk A/S,trending,,53.94 -15.06 (-21.83%),,trending,Novo Nordisk A/S trending on Yahoo,Other,5,2025-07-30T05:59:57.180914,25
+Yahoo Trending,UPS,"United Parcel Service, Inc.",trending,,90.84 -10.74 (-10.57%),,trending,"United Parcel Service, Inc. trending on Yahoo",Other,5,2025-07-30T05:59:57.180914,25
+Yahoo Trending,LLY,Eli Lilly and Company,trending,,762.95 -45.16 (-5.59%),,trending,Eli Lilly and Company trending on Yahoo,Other,5,2025-07-30T05:59:57.180914,25
+Yahoo Trending,PYPL,"PayPal Holdings, Inc.",trending,,71.45 -6.77 (-8.66%),,trending,"PayPal Holdings, Inc. trending on Yahoo",Other,5,2025-07-30T05:59:57.180914,25
+Yahoo Trending,META,"Meta Platforms, Inc.",trending,,700.00 -17.63 (-2.46%),,trending,"Meta Platforms, Inc. trending on Yahoo",Other,5,2025-07-30T05:59:57.180914,25
+Yahoo Trending,BYDDY,BYD Company Limited,trending,,16.10 -81.01 (-83.42%),,trending,BYD Company Limited trending on Yahoo,Other,5,2025-07-30T05:59:57.180914,25
+Yahoo Trending,NEGG,"Newegg Commerce, Inc.",trending,,56.19 +17.11 (+43.78%),,trending,"Newegg Commerce, Inc. trending on Yahoo",Other,5,2025-07-30T05:59:57.180914,25
+Yahoo Trending,FUBO,fuboTV Inc.,trending,,3.5400 +0.0100 (+0.28%),,trending,fuboTV Inc. trending on Yahoo,Other,5,2025-07-30T05:59:57.180914,25
+Yahoo Trending,BKNG,Booking Holdings Inc.,trending,,"5,590.77 -87.98 (-1.55%)",,trending,Booking Holdings Inc. trending on Yahoo,Other,5,2025-07-30T05:59:57.180914,25
